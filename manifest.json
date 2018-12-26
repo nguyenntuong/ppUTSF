@@ -1,0 +1,23 @@
+{
+  "name": "Auto UTS Extension",
+  "version": "0.4",
+  "description": "Đăng nhập UTS. Nếu muốn đăng xuất phải đánh bỏ tick đăng nhập tự động rồi mới đăng xuất, nếu không Ex sẽ tự động đăng nhập lại.",
+  "permissions": ["storage", "tabs", "http://*/*", "https://*/*", "https://*.ut.edu.vn/*", "activeTab"],
+  "icons": {
+    "16": "cookie.png",
+    "48": "cookie.png",
+    "128": "cookie.png"
+  },
+  "browser_action": {
+    "default_title": "Đăng nhập UTS. Nhanh hơn cả bạn có thể tưởng tượng. Ngày tháng không là vấn đề !",
+    "default_icon": "cookie.png",
+    "default_popup": "manager.html"
+  },
+  "background": {
+    "scripts": ["tabs-controler.js", "jquery-3.3.1.min.js", "background.js", "manager.js"]
+  },
+  "web_accessible_resources": [
+    "data/*.json"
+  ],
+  "manifest_version": 2
+}
